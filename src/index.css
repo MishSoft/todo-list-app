@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Kumbh+Sans&family=League+Spartan:wght@700&family=Overpass&family=Space+Mono:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  /* display: inline-block; */
+  width: 400px;
+  height: 90%;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  transition: all 0.2s ease;
+}
+
+.time {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.cal-alert {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.time-alert {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.input-field-section {
+  width: 100%;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-container {
+  position: relative;
+  width: 80%;
+
+  padding: 25px 0;
+
+  display: flex;
+}
+
+.note-field {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+
+  padding-left: 15px;
+  font-size: 16px;
+
+  border: none;
+  border-radius: 5px;
+  background: #ebeff2;
+
+  outline: transparent;
+  transition: all 0.2s ease;
+}
+
+.note-field:focus {
+  outline: 2px solid #20eeb0;
+}
+
+.checkbox-container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+
+  border: 2px solid #20eeb0;
+
+  left: 10px;
+  z-index: 1;
+}
+
+.checkbox-container img {
+  position: absolute;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.add-item-button {
+  padding: 13px 36px;
+  border-radius: 5px;
+  background: #20eeb0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.add-item-button:hover {
+  background-color: #19d19a;
+}
+
+.adedItem {
+  width: 100%;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 38%;
+}
+
+.adedItem::-webkit-scrollbar {
+  width: 8px;  /* Set the width of the scrollbar */
+}
+
+.adedItem::-webkit-scrollbar-thumb {
+  background-color: #6a6a6a;  /* Set the color of the scrollbar thumb */
+  border-radius: 4px;  /* Set the border radius for a rounded thumb */
+}
+
+.adedItem::-webkit-scrollbar-track {
+  background-color: #f1f1f1;  /* Set the color of the scrollbar track */
+  border-radius: 4px;  /* Set the border radius for a rounded track */
+}
+
+.item {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-controller {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.remove-item {
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .board {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0;
+  }
+
+  .image {
+    border-radius: 0;
+  }
+}
